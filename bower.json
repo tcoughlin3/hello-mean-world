@@ -1,0 +1,20 @@
+{
+  "name": "mean-app",
+  "description": "Full stack Hello World app.",
+  "main": "index.js",
+  "authors": [
+    "Tom Coughlin"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/tcoughlin3/hello-mean-world",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.16"
+  }
+}
