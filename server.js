@@ -16,8 +16,8 @@ console.log('Listening on port ' + port);
 
 // Controllers - This does not appear to be working.
 var controller = function(request, response, next) {
-	response.status(200).send('The server sent you a string!');
 	console.log('in server controller');
+	response.status(200).send('The server sent you a string!');
 };
 
 // Routes
@@ -31,7 +31,7 @@ server.get('/', function(request, response, next) {
 ////////////////////////////////////////////////////////////////////////////////
 //// DB
 ////////////////////////////////////////////////////////////////////////////////
-mongoURI = process.env.MONGOLAB_URI || 'mongodb://localhost/hello-mean-worlddb'
+var mongoURI = process.env.MONGOLAB_URI || 'mongodb://localhost/hello-mean-worlddb'
 ;
 mongoose.connect(mongoURI);
 var db = mongoose.connection;
