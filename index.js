@@ -5,7 +5,7 @@ angular.module('hello-mean-world', [
 .config(function($routeProvider, $httpProvider) {
 	$routeProvider
 		.when('/', {
-			templateUrl: 'MEAN-app/angularTemplate.html',
+			templateUrl: '/angularTemplate.html',
 			controller: 'PageController'
 		})
 });
