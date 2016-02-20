@@ -1,9 +1,15 @@
 angular.module('hello-mean-world.page', [])
 
-.controller('PageController', function ($scope) {
-	$scope.text = ['Angular says hello.'];
+.controller('PageController', ['$scope', function ($scope) {
+	$scope.greeting = 'Angular says hello.';
+	$scope.text = '';
+	$scope.list = [];
 	$scope.name = 'PageController';
-	$scope.addString = function(string) {
-		$scope.text.push(string);
+	$scope.addString = function(input) {
+		if ($scope.text) {
+			$scope.list.push(this.text);
+			$scope.text = '';
+			console.log($scope.list)
+		}
 	};
-});
+}]);
